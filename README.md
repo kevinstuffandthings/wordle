@@ -1,7 +1,7 @@
 # my stupid wordle clone
 i'm the last person in the world to have ever tried to play wordle. i just did it for the first time over thanksgiving 2023. it seemed fun, but i didn't wanna sign up for stuff.
 
-so i wrote a super crappy version in my favorite language -- ruby. you can play it in a terminal.
+so i spent about 90 minutes and wrote a super crappy version in my favorite language -- ruby. you can play it in a terminal.
 
 ## dictionary design
 there are 3 different dictionaries being utilized by the game. 2 are in this repo -- the [dictionaries/answers.txt](dictionaries/answers.txt) file has all the possible answers that can be included in the puzzle, and the [dictionaries/dictionary.txt](dictionaries/dictionary.txt) that includes a larger list of words that you can use as guesses. the latter is augmented by macos' `/usr/share/dict/words` file. i was running up against issues finding a good source of reasonable words that could be considered valid.
