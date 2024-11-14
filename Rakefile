@@ -15,4 +15,12 @@ namespace :wordle do
     trap("INT") { abort %(\nThe word was "#{game.puzzle}").red }
     game.start
   end
+
+  task :solve, %i[config] => "wordle:init" do |_, args|
+    require "wordle/solver"
+    input = Wordle::Solver::Input.new(args[:config])
+    dictionary = Wordle::Dictionary::Words.new
+    words = dictionary.search(input.to_rx)
+    words.each { |w| puts w }
+  end
 end

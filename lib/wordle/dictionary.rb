@@ -8,6 +8,12 @@ module Wordle
       words.include?(word.to_s)
     end
 
+    def search(regexp)
+      words.select do |word|
+        regexp.all? { |r| word =~ r }
+      end
+    end
+
     protected
 
     attr_reader :filenames
