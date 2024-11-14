@@ -16,6 +16,7 @@ namespace :wordle do
     game.start
   end
 
+  desc "Find potential solutions for a given config"
   task :solve, %i[config] => "wordle:init" do |_, args|
     require "wordle/solver"
     input = Wordle::Solver::Input.new(args[:config])
