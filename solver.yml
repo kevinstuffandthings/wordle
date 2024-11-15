@@ -1,0 +1,13 @@
+# provide a list of letters you know to be absent
+absent: ertyiosdfn
+
+# for each position (1-5) you have info on, provide the ordinal
+# as the key, and the letters as the value. a single letter value
+# should be used when the letter has been identified as being in
+# that position. when a letter is known to be valid, but misplaced,
+# it (and any others in that position) should be prefixed with a
+# hyphen
+positions:
+  2: -al
+  3: -al
+  5: a

@@ -55,8 +55,7 @@ module Wordle
       def initialize
         super(
           "dictionaries/dictionary.txt",
-          "dictionaries/answers.txt",
-          "/usr/share/dict/words"
+          "dictionaries/answers.txt"
         )
       end
     end

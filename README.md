@@ -23,3 +23,11 @@ $ rake wordle:play
 ```
 
 it just plays one game at a time. if you want to bail in the middle, ctrl-c will do it.
+
+## cheating at real wordle
+if you're stuck on something, update the [solver.yml](solver.yml) file based on the guesses you've already made, and then use `wordle:solve`:
+```bash
+$ rake "wordle:solve[solver.yml]"
+```
+
+you'll be provided with a narrowed-down list of candidate words that conform to the constraints you've provided.
